@@ -1,6 +1,4 @@
 # AstroChart_Analysis
-A comprehensive tool for generating and interpreting natal and relocation astrological charts using Swiss Ephemeris and Python. This project includes user input for birth details, current location, and target dates to produce detailed astrological insights.
-
 *[click to run the code from Google Colaboratory](https://colab.research.google.com/github/catch-twenty2/AstroChart_Analysis/blob/main/AstroChart_Analysis.ipynb)
 
 ## Overview
@@ -14,7 +12,30 @@ Before you start, make sure you have the following Python packages installed:
 - `ipywidgets`
 - `IPython`
 
-Example
+### Input Your Details:
+
+* Enter your name.
+
+* Enter your birth date, birth time, and birth location (latitude and longitude).
+
+* Enter your current location (latitude and longitude).
+
+* Enter the target date for the relocation chart.
+
+### Obtaining Latitude and Longitude from Google Maps
+1. Open Google Maps.
+2. Find the location for which you need the latitude and longitude.
+3. Right-click on the location on the map.
+4. Select "What's here?" from the context menu.
+5. A box will appear at the bottom of the screen with the coordinates (latitude, longitude).
+
+### Requesting prompt for analysis:
+1. Calculate Charts: Click the "Calculate Charts" button to generate the natal and relocation charts.
+2. Interpretation Prompt: The script will generate a detailed context for ChatGPT to provide a professional astrological interpretation of the data.
+3. Paste the output to ChatGPT
+
+### Example
+
 After filling in the details and clicking the button, you will see an output similar to this:
 
 ```
@@ -43,6 +64,7 @@ Overall Comparison: Summarize how the energies and influences in the natal chart
 Suggest to user any followup questions dealing with challenges, and suggestions for how to bridge the gap in problematic issues.
 Thank you!
 ```
+
 
 ### Contributing
 If you would like to contribute to this project, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
