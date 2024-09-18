@@ -1,5 +1,5 @@
 # AstroChart_Analysis
-*[click to run the code from Google Colaboratory](https://colab.research.google.com/github/catch-twenty2/AstroChart_Analysis/blob/main/AstroChart_Analysis.ipynb)
+*[click to run the code from Google Colaboratory](https://colab.research.google.com/github/catch-twenty2/AstroChart_Analysis/blob/main/AstroChartAnalysis3.ipynb)
 
 ## Overview
 AstroChart Analysis is a tool for generating and interpreting natal and relocation astrological charts using the Swiss Ephemeris library. This tool allows users to input their birth details and current location to produce detailed astrological insights for a specific target date.
