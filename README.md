@@ -1,67 +1,104 @@
 # AstroChart_Analysis
-*[click to run the code from Google Colaboratory](https://colab.research.google.com/github/catch-twenty2/AstroChart_Analysis/blob/main/AstroChartAnalysis3.ipynb)
+*[click to run the code from Google Colaboratory](https://colab.research.google.com/github/catch-twenty2/AstroChart_Analysis/blob/main/AstroChartAnalysis5g.ipynb)
 
 ## Overview
-AstroChart Analysis is a tool for generating and interpreting natal and relocation astrological charts using the Swiss Ephemeris library. This tool allows users to input their birth details and current location to produce detailed astrological insights for a specific target date.
+AstroChart Natal & Transit Analysis is a Python tool for generating detailed astrological data using the Swiss Ephemeris library. This tool allows users to input birth details and a specific target date to produce comprehensive natal chart information and transit aspects, suitable for astrological interpretation.
+
+*Remember, astrology is a tool for understanding and empowering yourself. By acknowledging the influences of the stars and actively navigating the challenges they present, you can create a fulfilling and meaningful life.*
 
 ## Getting Started
 
-### Prerequisites
-Before you start, make sure you have the following Python packages installed:
-- `swisseph`
-- `ipywidgets`
-- `IPython`
+### Input Your Details
+When you run the script in Google Colab, you will see input fields:
 
-### Input Your Details:
-
-* Enter your name.
-
-* Enter your birth date, birth time, and birth location (latitude and longitude).
-
-* Enter your current location (latitude and longitude).
-
-* Enter the target date for the relocation chart.
+* User Name: Enter the name for the chart.
+* Birth Details: Enter the exact Birth Year, Month, Day, and Time (in HH:MM format, 24-hour clock).
+* Birth Location: Enter the Latitude and Longitude for the place of birth.
+* Target Date: Enter the Year, Month, and Day for which you want to see the transit aspects relative to the natal chart.
 
 ### Obtaining Latitude and Longitude from Google Maps
 1. Open Google Maps.
 2. Find the location for which you need the latitude and longitude.
 3. Right-click on the location on the map.
 4. Select "What's here?" from the context menu.
-5. A box will appear at the bottom of the screen with the coordinates (latitude, longitude).
+5. A box will appear at the bottom of the screen with the coordinates (latitude, longitude). Copy these values.
 
 ### Requesting prompt for analysis:
 1. Calculate Charts: Click the "Calculate Charts" button to generate the natal and relocation charts.
 2. Interpretation Prompt: The script will generate a detailed context for ChatGPT to provide a professional astrological interpretation of the data.
 3. Paste the output to ChatGPT
 
-### Example
+### Generating the Astrological Data:
+1. Calculate Data: After filling in the details, click the "Calculate Chart" button.
+2. Review Output: The script will output a detailed report containing:
+* Calculated birth data (including UTC time).
+* Natal chart positions (planets, nodes, asteroids, Chiron) with sign, degree/minute, house, ruler, and retrograde status.
+* Ascendant (AC) and Midheaven (MC).
+* Chart analysis distributions (Elements, Modes, Polarity, Hemispheres, Quadrants).
+* Fixed Star conjunctions (within a 1° orb).
+* Natal aspects.
+* Transit aspects for the specified target date.
+* Interpretation guidelines.
+3. Use for Interpretation: Copy the entire generated output (starting from "Dear Assistant...") and paste it into an AI assistant (like ChatGPT, Claude, Gemini, etc.) or use it for your own astrological interpretation, following the provided guidelines.
 
-After filling in the details and clicking the button, you will see an output similar to this:
+
+### Example Output Structure
+After filling in the details and clicking the button, the output in the output cell will look similar to this structure (using the example data):
 
 ```
-PROMPT FOR ChatGPT
-========================
-Dear ChatGPT, I have gathered detailed astrological data for a person, including both their natal chart and a relocation chart for a specific target date. I would like a professional astrological interpretation of this data. Below is the information provided:
+Dear Assistant, act as a professional Astrologer. Below is detailed astrological data for interpretation.
 
-Context:
+**Astrological Data:**
 Name: Neo
-Birth Date and Time: 2003-04-29, 12:00
-Birth Location: Lat: 52.52, Lon: 13.40
-Current Location: Lat: 52.52, Lon: 13.40
-Target Date: 2024-09-01
+Place of Birth: Wanchaq, Peru (-13.5319, -71.9675)
+Date of Birth: 1971-12-01
+Time of Birth: 08:19 (Local)
+Calculated UTC Offset: -5.00 hours
+UTC Time of Birth: 1971-12-01 13:19:00 UT
+Target Date for Transits: 2025-12-31
 
-Please provide a professional interpretation of this data, focusing on the following aspects:
+--- Natal Chart Positions ---
+Sun: 08°41' Sagittarius (Ruler: Jupiter) in House 11 [Lon: 248.69°, Lat: 0.00°]
+Moon: 28°04' Taurus (Ruler: Venus) in House 5 [Lon: 58.08°, Lat: 4.73°]
+Mercury: 28°03' Sagittarius (Ruler: Jupiter) in House 12 [Lon: 268.07°, Lat: -1.61°]
+... (and other planets/points) ...
+Saturn (R): 02°34' Gemini (Ruler: Mercury) in House 5 [Lon: 62.57°, Lat: -2.14°]
+... (Nodes, Chiron, Asteroids) ...
 
-... (natal chart data) ...
+Ascendant (AC): 21°18' Capricorn (291.32°)
+Midheaven (MC): 18°59' Libra (199.00°)
 
-... (relocation chart data) ...
+--- Chart Analysis ---
+Element Distribution: Fire: 7, Earth: 3, Air: 6, Water: 1
+Mode Distribution: Cardinal: 5, Fixed: 6, Mutable: 6
+Polarity Distribution: Masculine: 13, Feminine: 4
+Hemisphere Balance: Eastern: 9, Western: 8, Northern: 7, Southern: 10
+Quadrant Balance: First: 4, Second: 3, Third: 5, Fourth: 5
 
-Natal Chart Interpretation: Explain the inherent personality traits, life patterns, and potential challenges based on the natal chart data.
-Relocation Chart Interpretation: Describe how the individual might experience life in the new location at the specified target date, highlighting any significant changes or continuities from the natal chart.
-Aspect Analysis: Provide insights into the key themes and dynamics in the person's life as indicated by the aspects in both charts.
-Overall Comparison: Summarize how the energies and influences in the natal chart compare to those in the relocation chart, and what this might mean for the individual's experiences and opportunities during the target period.
+Retrograde Planets: Saturn are retrograde.
 
-Suggest to user any followup questions dealing with challenges, and suggestions for how to bridge the gap in problematic issues.
+--- Declinations and Parallels ---
+(Declination calculation currently skipped)
+
+--- Fixed Star Conjunctions ---
+Sun conjunct Antares (Star Lon: 249.37°, Orb: 0.68°)
+
+--- Natal Aspects ---
+Sun Square Mars (orb: 5.56°)
+Sun Conjunction Jupiter (orb: 6.80°)
+... (many more aspects) ...
+
+--- Transit Aspects (for Target Date) ---
+Transit Sun Conjunction Natal Venus (orb: 7.02°)
+Transit Sun Sextile Natal Mars (orb: 4.19°)
+... (many more transit aspects) ...
+
+**Interpretation Guidelines:**
+1. **Natal Chart Analysis:**
+   - Examine the individual's personality traits, strengths, and potential challenges based on the Sun, Moon, and Ascendant.
+   - Highlight important aspects...
+... (Full guidelines as generated by the script) ...
+
 Thank you!
 ```
 
