@@ -51,8 +51,8 @@ Dear Assistant, act as a professional Astrologer. Below is detailed astrological
 **Astrological Data:**
 Name: Neo
 Place of Birth: Wanchaq, Peru (-13.5319, -71.9675)
-Date of Birth: 1971-12-01
-Time of Birth: 08:19 (Local)
+Date of Birth: 1981-10-10
+Time of Birth: 18:19 (Local)
 Calculated UTC Offset: -5.00 hours
 UTC Time of Birth: 1971-12-01 13:19:00 UT
 Target Date for Transits: 2025-12-31
