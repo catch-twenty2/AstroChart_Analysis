@@ -1,5 +1,5 @@
 # AstroChart_Analysis
-*[click to run the code from Google Colaboratory]([https://colab.research.google.com/github/catch-twenty2/AstroChart_Analysis/blob/main/AstroChartAnalysis5g.ipynb](https://colab.research.google.com/github/catch-twenty2/AstroChart_Analysis/blob/main/AstroChartAnalysis6light.ipynb)
+*[click to run the code from Google Colaboratory](https://colab.research.google.com/github/catch-twenty2/AstroChart_Analysis/blob/main/AstroChartAnalysis6light.ipynb)
 
 ## Overview
 AstroChart Natal & Transit Analysis is a Python tool for generating detailed astrological data using the Swiss Ephemeris library. This tool allows users to input birth details and a specific target date to produce comprehensive natal chart information and transit aspects, suitable for astrological interpretation.
